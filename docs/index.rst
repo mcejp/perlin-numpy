@@ -1,6 +1,8 @@
-perlin-numpy API reference
+perlin-numpy documentation
 ==========================
 
-.. automodule:: perlin_numpy
-   :imported-members:
-   :members:
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   api

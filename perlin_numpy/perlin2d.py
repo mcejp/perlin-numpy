@@ -9,18 +9,17 @@ def generate_perlin_noise_2d(
         shape, res, tileable=(False, False), interpolant=interpolant,
         rng=None
 ):
-    """Generate a 2D numpy array of perlin noise.
+    """Generate a single octave of 2-dimensional perlin noise.
 
     Args:
-        shape: The shape of the generated array (tuple of two ints).
+        shape (tuple[int, int]): The shape of the generated array.
             This must be a multple of res.
-        res: The number of periods of noise to generate along each
-            axis (tuple of two ints). Note shape must be a multiple of
-            res.
-        tileable: If the noise should be tileable along each axis
-            (tuple of two bools). Defaults to (False, False).
+        res (tuple[int, int]): The number of periods of noise to generate along
+            each axis.
+        tileable (tuple[bool, bool]): If the noise should be tileable along each
+            axis. Defaults to ``(False, False)``.
         interpolant: The interpolation function, defaults to
-            t*t*t*(t*(t*6 - 15) + 10).
+            ``t*t*t*(t*(t*6 - 15) + 10)``.
         rng: A NumPy random number generator for reproducible randomness,
             if desired.
 
@@ -69,18 +68,17 @@ def generate_fractal_noise_2d(
     """Generate a 2D numpy array of fractal noise.
 
     Args:
-        shape: The shape of the generated array (tuple of two ints).
-            This must be a multiple of lacunarity**(octaves-1)*res.
-        res: The number of periods of noise to generate along each
-            axis (tuple of two ints). Note shape must be a multiple of
-            (lacunarity**(octaves-1)*res).
-        octaves: The number of octaves in the noise. Defaults to 1.
-        persistence: The scaling factor between two octaves.
-        lacunarity: The frequency factor between two octaves.
-        tileable: If the noise should be tileable along each axis
-            (tuple of two bools). Defaults to (False, False).
+        shape (tuple[int, int]): The shape of the generated array.
+            This must be a multiple of ``lacunarity**(octaves-1)*res``.
+        res (tuple[int, int]): The number of periods of noise to generate along
+            each axis.
+        octaves (int): The number of octaves in the noise. Defaults to 1.
+        persistence (float): The scaling factor between two octaves.
+        lacunarity (int): The frequency factor between two octaves.
+        tileable (tuple[bool, bool]): If the noise should be tileable along each
+            axis. Defaults to ``(False, False)``.
         interpolant: The, interpolation function, defaults to
-            t*t*t*(t*(t*6 - 15) + 10).
+            ``t*t*t*(t*(t*6 - 15) + 10)``.
         rng: A NumPy random number generator for reproducible randomness,
             if desired.
 
@@ -90,7 +88,7 @@ def generate_fractal_noise_2d(
 
     Raises:
         ValueError: If shape is not a multiple of
-            (lacunarity**(octaves-1)*res).
+            ``lacunarity**(octaves-1)*res``.
     """
     noise = np.zeros(shape)
     frequency = 1
