@@ -17,4 +17,5 @@ dependencies = [
 docs = ["sphinx", "sphinx_rtd_theme"]
 
 [project.urls]
+Documentation = "https://perlin-numpy.readthedocs.io/"
 Repository = "https://github.com/pvigier/perlin-numpy"
