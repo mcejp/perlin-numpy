@@ -43,6 +43,7 @@ The function `generate_fractal_noise_2d` combines several octaves of 2D perlin n
 * `persistence`: scaling factor between two octaves (float)
 * `lacunarity`: frequency factor between two octaves (float)
 * `tileable`: if the noise should be tileable along each axis (tuple of 2 bools)
+* `rng`: a NumPy random number generator, or None (np.random will be used in that case)
 
 Note: `shape` must be a multiple of `lacunarity^(octaves-1)*res`
 
@@ -65,6 +66,7 @@ The function `generate_fractal_noise_2d` combines several octaves of 3D perlin n
 * `persistence`: scaling factor between two octaves (float)
 * `lacunarity`: frequency factor between two octaves (float)
 * `tileable`: if the noise should be tileable along each axis (tuple of 3 bools)
+* `rng`: a NumPy random number generator, or None (np.random will be used in that case)
 
 Note: `shape` must be a multiple of `lacunarity^(octaves-1)*res`
 
