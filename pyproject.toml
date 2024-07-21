@@ -5,9 +5,23 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "perlin-numpy"
 version = "0.0.1"
-license = {text = "MIT License"}
-authors = [{name = "Pierre Vigier"}]
-maintainers = [{name = "Martin Cejp"}]
+description = "A fast and simple perlin noise generator using NumPy"
+readme = "README.md"
+authors = [{name = "pvigier"}]
+maintainers = [{name = "mcejp"}]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Topic :: Scientific/Engineering :: Mathematics",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
 requires-python = ">=3"
 dependencies = [
     "numpy>=1.15",
@@ -18,4 +32,4 @@ docs = ["sphinx", "sphinx_rtd_theme"]
 
 [project.urls]
 Documentation = "https://perlin-numpy.readthedocs.io/"
-Repository = "https://github.com/pvigier/perlin-numpy"
+Repository = "https://github.com/mcejp/perlin-numpy"
